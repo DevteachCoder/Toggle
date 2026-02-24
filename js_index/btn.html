@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropBtn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropBtn:hover,.dropBtn:focus {
+            background-color: #2e83bd;
+        }
+
+        .dropDown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropDown-content {
+            position: absolute;
+            display: none;
+            background-color: #f1f1f1;
+            min-width: 260px;
+            overflow: auto;
+            box-shadow: 0 8px 16px rgb(0,0,0,0.5);
+        }
+         .dropDown-content a {
+             color:#000;
+             padding: 12px 16px;
+             text-decoration: none;
+             display: block;
+         }
+          .dropDown-content a:hover {
+            background-color: #ddd;
+          }
+          .show {
+            display: block;
+          }
+
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <div class="dropDown">
+        <button onclick="myFunction()" class="dropBtn">Drop Down</button>
+        <div id="myDropDown" class="dropDown-content">
+            <a href="">Home</a>
+            <a href="">Contact</a>
+            <a href="">About</a>
+        </div>
+    </div>
+
+
+    <script>
+       function myFunction() {
+        document.getElementById("myDropDown").classList.toggle("show")
+       }
+    </script>
+</body>
+</html>
